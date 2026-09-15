@@ -78,9 +78,13 @@ def search_web(query: str, max_results: int = 4) -> List[Dict[str, Any]]:
     results: List[Dict[str, Any]] = []
     seen_urls = set()
 
-    # Try live DuckDuckGo search first
+    # Try live search
     try:
-        from duckduckgo_search import DDGS
+        try:
+            from ddgs import DDGS
+        except ImportError:
+            from duckduckgo_search import DDGS
+
         with DDGS() as ddgs:
             raw_results = list(ddgs.text(clean_query, max_results=max_results))
             for item in raw_results:
