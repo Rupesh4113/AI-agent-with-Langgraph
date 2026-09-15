@@ -1,0 +1,11 @@
+# LangGraph Architecture and Design Principles
+
+LangGraph is a library designed for building robust, multi-actor, and stateful agentic workflows using graph structures. Unlike traditional linear DAG-based execution engines, LangGraph natively supports cyclical graphs, persistent state checkpointing, and human-in-the-loop interactions.
+
+Core Concepts:
+1. StateGraph: The graph orchestrator parameterised by a typed state schema (such as a TypedDict or Pydantic model). All nodes receive the current state and return state updates.
+2. Channels and Reducers: State updates can either overwrite keys or be combined using reducer functions, such as `add_messages` for message histories or append reducers for evidence collections.
+3. Nodes: Isolated Python functions that perform a single computational responsibility (e.g., query analysis, planning, tool execution, fact checking).
+4. Edges and Conditional Edges: Control flow routers that direct execution to next nodes based on dynamic state conditions (such as confidence scores, error flags, or retry count limits).
+5. Checkpointers: Durable persistence layers (such as MemorySaver or SqliteSaver) that store snapshots of the state at each superstep. This enables thread resumption, time travel debugging, and human review pauses.
+6. Interrupts: Mechanisms allowing the graph to pause before or after specified nodes, enabling user review, input modification, and explicit approval before continuing.

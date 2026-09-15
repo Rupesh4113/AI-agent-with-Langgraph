@@ -1,0 +1,9 @@
+# Quantum Computing Roadmap and Milestones (2025/2026)
+
+Quantum computing has transitioned from noisy intermediate-scale quantum (NISQ) devices to early fault-tolerant quantum computing (FTQC) systems utilizing quantum error correction (QEC).
+
+Key Metrics and Benchmarks:
+1. Physical vs Logical Qubits: Modern processors contain over 1,000 physical superconducting or neutral-atom qubits, but fault tolerance requires grouping hundreds of physical qubits to form a single protected logical qubit using surface codes or LDPC codes.
+2. Error Thresholds: Two-qubit gate fidelities have exceeded 99.8% in leading laboratory environments, surpassing the fault-tolerance threshold needed for active error suppression.
+3. Quantum Advantage Application Domains: Primary active domains include materials science simulation, catalyst discovery for green ammonia synthesis, and combinatorial optimization algorithms.
+4. Investment and Commercial Deployment: Over $38 billion in cumulative global government and private investments have been committed through 2026.

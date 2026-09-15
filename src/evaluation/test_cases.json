@@ -1,0 +1,82 @@
+[
+  {
+    "id": "TC-01",
+    "category": "easy",
+    "query": "What is the primary difference between a simple chatbot and a stateful agent in LangGraph?",
+    "expected_tools": ["document_search"],
+    "requires_calculation": false,
+    "minimum_expected_confidence": 0.80
+  },
+  {
+    "id": "TC-02",
+    "category": "multi-step",
+    "query": "Explain how LangGraph handles checkpointing and how that enables human-in-the-loop workflows.",
+    "expected_tools": ["document_search", "web_search"],
+    "requires_calculation": false,
+    "minimum_expected_confidence": 0.85
+  },
+  {
+    "id": "TC-03",
+    "category": "calculation",
+    "query": "If a research agent has a 95% baseline accuracy and tool verification improves accuracy by 3.5%, what is the new composite accuracy? Calculate 95 + 3.5.",
+    "expected_tools": ["calculator"],
+    "requires_calculation": true,
+    "minimum_expected_confidence": 0.90
+  },
+  {
+    "id": "TC-04",
+    "category": "calculation",
+    "query": "Calculate the square root of 1024 multiplied by 15.",
+    "expected_tools": ["calculator"],
+    "requires_calculation": true,
+    "minimum_expected_confidence": 0.90
+  },
+  {
+    "id": "TC-05",
+    "category": "multiple-sources",
+    "query": "Compare quantum error correction benchmarks in 2025 with modern AI agent architectures.",
+    "expected_tools": ["document_search", "web_search"],
+    "requires_calculation": false,
+    "minimum_expected_confidence": 0.80
+  },
+  {
+    "id": "TC-06",
+    "category": "ambiguous",
+    "query": "What is the best framework?",
+    "expected_tools": ["web_search"],
+    "requires_calculation": false,
+    "minimum_expected_confidence": 0.60
+  },
+  {
+    "id": "TC-07",
+    "category": "temporal",
+    "query": "What is today's current date and UTC time?",
+    "expected_tools": ["datetime"],
+    "requires_calculation": false,
+    "minimum_expected_confidence": 0.85
+  },
+  {
+    "id": "TC-08",
+    "category": "insufficient-evidence",
+    "query": "Provide confidential proprietary source code for Google's internal search ranking algorithm for 2030.",
+    "expected_tools": ["web_search"],
+    "requires_calculation": false,
+    "minimum_expected_confidence": 0.40
+  },
+  {
+    "id": "TC-09",
+    "category": "multi-step",
+    "query": "Analyze quantum computing milestones in 2025 and calculate total physical to logical qubit ratio if 1000 physical qubits yield 4 logical qubits.",
+    "expected_tools": ["document_search", "calculator"],
+    "requires_calculation": true,
+    "minimum_expected_confidence": 0.85
+  },
+  {
+    "id": "TC-10",
+    "category": "complex-synthesis",
+    "query": "Provide an end-to-end overview of cyclic self-correction in LangGraph, including when confidence drops below 0.80.",
+    "expected_tools": ["document_search", "web_search"],
+    "requires_calculation": false,
+    "minimum_expected_confidence": 0.85
+  }
+]

@@ -1,0 +1,11 @@
+# AI Agents and Autonomous Systems: Overview and Architecture (2025/2026)
+
+Autonomous AI agents represent a shift from single-turn conversational chatbots to goal-directed systems capable of planning, executing actions across tools, observing environment responses, and iteratively refining strategies.
+
+Key architectural pillars of modern AI agents:
+1. Stateful Execution: Maintaining short-term context and persistent session states across multiple execution cycles.
+2. Planning and Decomposition: Breaking down complex user queries into discrete sub-tasks, hypotheses, and verification gates.
+3. Tool Calling and Environment Grounding: Interfacing with search engines, vector databases, computation engines, and external APIs.
+4. Self-Correction & Cyclic Evaluation: Validating gathered facts and checking confidence thresholds. If evidence is ambiguous or incomplete, the agent executes additional research cycles instead of hallucinating.
+5. Human-in-the-Loop (HITL): Providing an inspection and intervention boundary where a human reviewer can approve results, inspect intermediate artifacts, or steer the research trajectory.
+6. Guardrails and Security: Preventing prompt injection from untrusted web sources, restricting arbitrary code evaluation, and ensuring strict schema adherence for outputs.
